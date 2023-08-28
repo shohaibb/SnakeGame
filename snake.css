@@ -1,0 +1,98 @@
+/*FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Akatab:wght@600&family=Belanosima&family=Caveat:wght@700&family=Dosis:wght@600&family=Gloria+Hallelujah&family=Handjet:wght@300;400;500&family=Kalam:wght@700&family=Lilita+One&display=swap');
+
+/* STUFF FOR ENTIRE PAGE (default stuff) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gloria Hallelujah', sans-serif; /* font im using, can be found in google fonts*/
+  }
+  h1 {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 36px;
+    color: white;
+    font-family: 'Gloria Hallelujah', sans-serif; /* You can use any font from your imported fonts */
+}
+h2 {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-family: 'Gloria Hallelujah', sans-serif; /* You can use any font from your imported fonts */
+}
+
+
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vmin; /*shifts board to the middle of page */
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(55, 55, 55)); /*background color */
+
+  }
+  
+  .wrapper{
+    width: 65vmin; /* width of board*/
+    height: 70vmin; /*height of board*/
+    background: rgb(55, 55, 55); /* color of board*/
+    border-radius: 10px; /* gives corners of board a bit of roundness */
+    display: flex;
+    flex-direction:column ;
+    overflow: hidden;
+    border: 5px solid rgb(64, 64, 64);
+  }
+
+  .game-details{
+    color: aliceblue; /* color of words */
+    font-size: 18px; /*size of words*/
+    font-weight: 500; /*boldness of fonts*/
+    padding: 20px 27px; /* adds distance between words and corners*/
+    display: flex; /*puts space between the score and high-score*/
+    justify-content: space-between; /* works with display:flex */
+
+  }
+
+  .game-board{
+    width: 100%; /*width of actual game board */
+    height: 100%; /*height of actual game board */
+    background: linear-gradient(to top, rgb(0, 0, 0), rgb(55, 55, 55)); /*background color */
+    border-radius: 10px; /* gives corners of board a bit of roundness */
+    display: grid; /*creates a grid for the snake to go on*/
+    grid-template: repeat(30, 1fr)/repeat(30,1fr); /*dimensions for grid (31 by 31)*/
+    border: .5px solid rgb(255, 255, 255);
+
+
+  }
+
+  .game-board .food {
+    background: red;
+    box-shadow: 0 0 15px #FF0000, 0 0 25px #FF0000, 0 0 35px #FF0000; /* This gives the glow effect */
+    border-radius: 50%; /* This makes the food circular, which generally complements the glow effect */
+}
+
+
+  .game-board .head{
+    background: lightgreen;
+    box-shadow: 0 0 15px #c9e9bf, 0 0 25px #bee0c3, 0 0 35px #98dba4; /* This gives the glow effect */
+
+
+  }
+  
+  h3 {
+    position: absolute;
+    top: 680px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    font-family: 'Gloria Hallelujah', sans-serif; /* You can use any font from your imported fonts */
+}
